@@ -47,7 +47,7 @@ func TestGetAPIKey(t *testing.T) {
 				}
 				return
 			}
-			if err == nil {
+			if err != nil {
 				t.Fatalf("GetAPIKey() unexpected error = %v", err)
 			}
 			if gotKey != tt.wantKey {
